@@ -137,7 +137,7 @@ module PostRank
     end
 
     def unescape(uri)
-      uri.tr('+', ' ').gsub(URIREGEX[:unescape]) do
+      uri.gsub(URIREGEX[:unescape]) do
         [$1.delete('%')].pack('H*')
       end
     end
